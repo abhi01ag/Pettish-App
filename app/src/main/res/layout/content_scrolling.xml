@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".homepage"
+    tools:showIn="@layout/activity_homepage">
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="419dp"
+        android:layout_height="199dp"
+        android:layout_marginBottom="244dp"
+        android:contentDescription="@string/Welcome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pup3" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="419dp"
+        android:layout_height="199dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:srcCompat="@drawable/pups2" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="419dp"
+        android:layout_height="199dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/Welcome"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/catdog1" />
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/purple_200"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_200"
+        android:background="@color/purple_200">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="390dp"
+            android:layout_height="45dp"
+            android:fontFamily="@font/orangefont"
+            android:text="WELCOME TO PETTISH"
+            android:textAlignment="center"
+            android:textColor="#7D21D8"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="255dp"
+            android:layout_height="136dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView5"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:srcCompat="@drawable/pets" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="610dp"
+            android:layout_height="261dp"
+            android:layout_marginTop="36dp"
+            android:background="@color/white"
+            android:contentDescription="@string/food"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:srcCompat="@drawable/food" />
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton7"
+            app:srcCompat="@drawable/products" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="152dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/fontyes"
+            android:text="Pet Foods"
+            android:textColor="@color/design_default_color_error"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="152dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/fontyes"
+            android:text="Products"
+            android:textColor="@color/design_default_color_error"
+            android:textAlignment="center"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:srcCompat="@drawable/petphoto"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="152dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/fontyes"
+            android:text="Pets"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_error"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton6"
+            android:layout_width="54dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.919"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/floatingActionButton7"
+            app:srcCompat="@drawable/ic_baseline_add_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="@+id/floatingActionButton6"
+            app:layout_constraintHorizontal_bias="0.919"
+            app:layout_constraintStart_toStartOf="@+id/floatingActionButton6"
+            app:layout_constraintTop_toBottomOf="@+id/floatingActionButton8"
+            app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="@+id/floatingActionButton7"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/floatingActionButton7"
+            app:layout_constraintTop_toBottomOf="@+id/floatingActionButton9"
+            app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_constraintBottom_toTopOf="@+id/imageButton9"
+            app:layout_constraintEnd_toEndOf="@+id/floatingActionButton8"
+            app:layout_constraintStart_toStartOf="@+id/floatingActionButton8"
+            app:srcCompat="@drawable/ic_baseline_account_box_24" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
