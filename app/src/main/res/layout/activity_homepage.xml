@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,167 +10,156 @@
     android:fillViewport="true">
 
 
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:id="@+id/constraintLayout"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/purple_200"
-        android:background="@color/purple_200">
+        android:background="@drawable/bcroung"
+        android:backgroundTint="@null">
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="390dp"
-            android:layout_height="45dp"
-            android:fontFamily="@font/orangefont"
-            android:text="WELCOME TO PETTISH"
-            android:textAlignment="center"
-            android:textColor="#7D21D8"
-            android:textSize="34sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="255dp"
-            android:layout_height="136dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintEnd_toEndOf="@+id/textView5"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:srcCompat="@drawable/pets" />
-
-        <ImageButton
-            android:id="@+id/imageButton7"
-            android:layout_width="610dp"
-            android:layout_height="261dp"
-            android:layout_marginTop="36dp"
-            android:background="@color/white"
-            android:contentDescription="@string/food"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView5"
-            app:srcCompat="@drawable/food" />
-
-        <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="4dp"
-            android:contentDescription="@string/product"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton7"
-            app:srcCompat="@drawable/products" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="152dp"
-            android:layout_height="38dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/fontyes"
-            android:text="Pet Foods"
-            android:textColor="@color/design_default_color_error"
-            android:textAlignment="center"
-            android:textSize="34sp"
-            app:flow_horizontalAlign="center"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="152dp"
-            android:layout_height="38dp"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/fontyes"
-            android:text="Products"
-            android:textColor="@color/design_default_color_error"
-            android:textAlignment="center"
-            android:textSize="34dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton9"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageButton
-            android:id="@+id/imageButton10"
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="30dp"
             android:layout_height="match_parent"
             android:layout_marginTop="16dp"
+            android:background="#00008577"
+            android:backgroundTint="@color/teal_200"
+            android:minHeight="?actionBarSize"
+            android:theme="?actionBarTheme"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.068"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9"
-            app:srcCompat="@drawable/petphoto"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="152dp"
-            android:layout_height="38dp"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/fontyes"
-            android:text="Pets"
-            android:textAlignment="center"
-            android:textColor="@color/design_default_color_error"
-            android:textSize="34dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton10"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton6"
-            android:layout_width="54dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="20dp"
-            android:clickable="true"
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="358dp"
+            android:layout_height="469dp"
+            android:layout_marginTop="248dp"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.919"
+            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/floatingActionButton7"
-            app:srcCompat="@drawable/ic_baseline_add_24" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton7"
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:fadingEdge="vertical" />
+
+                <ImageButton
+                    android:id="@+id/imageButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null" />
+
+                <LinearLayout
+                    android:layout_width="14dp"
+                    android:layout_height="729dp"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="103dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton8"
+                    android:layout_width="320dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null" />
+
+                <ImageButton
+                    android:id="@+id/imageButton11"
+                    android:layout_width="322dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:clickable="true"
-            app:layout_constraintEnd_toEndOf="@+id/floatingActionButton6"
-            app:layout_constraintHorizontal_bias="0.919"
-            app:layout_constraintStart_toStartOf="@+id/floatingActionButton6"
-            app:layout_constraintTop_toBottomOf="@+id/floatingActionButton8"
-            app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+            android:background="#F4B8B8"
+            android:backgroundTint="#F1D1D1"
+            android:clipToPadding="true"
+            android:fadingEdge="vertical"
+            android:fadingEdgeLength="3dp"
+            android:orientation="horizontal"
+            android:outlineProvider="paddedBounds"
+            android:padding="2dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintCircleRadius="244dp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.75">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:clickable="true"
-            app:layout_constraintEnd_toEndOf="@+id/floatingActionButton7"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/floatingActionButton7"
-            app:layout_constraintTop_toBottomOf="@+id/floatingActionButton9"
-            app:srcCompat="@drawable/ic_baseline_settings_24" />
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            app:layout_constraintBottom_toTopOf="@+id/imageButton9"
-            app:layout_constraintEnd_toEndOf="@+id/floatingActionButton8"
-            app:layout_constraintStart_toStartOf="@+id/floatingActionButton8"
-            app:srcCompat="@drawable/ic_baseline_account_box_24" />
+                android:text=" search"
+                android:textColorHighlight="#DDA6A6"
+                android:textColorLink="#EADADA" />
 
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fadingEdge="vertical"
+                android:textAlignment="textEnd"
+                app:backgroundTint="#EAAEAE"
+                app:fabSize="mini"
+                app:srcCompat="@android:drawable/ic_menu_search" />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
 
 

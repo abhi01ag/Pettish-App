@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+     <group android:checkableBehavior="single">
+         <item
+             android:id="@+id/nav_home"
+             android:title="home"
+             android:icon="@drawable/pet2"/>
+
+         <item
+             android:id="@+id/nav_set"
+             android:title="settings"
+             android:icon="@drawable/pet2"/>
+
+         <item
+             android:id="@+id/nav_login"
+             android:title="login"
+             android:icon="@drawable/pet2"/>
+
+         <item
+             android:id="@+id/nav_feed"
+             android:title="feedback"
+             android:icon="@drawable/pet2"/>
+         <item
+             android:id="@+id/nav_profile"
+             android:title="profile"
+             android:icon="@drawable/pet2"/>
+
+     </group>
+</menu>

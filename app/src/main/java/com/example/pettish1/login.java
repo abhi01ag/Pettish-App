@@ -17,8 +17,8 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        TextView emailid = (TextView) findViewById(R.id.emailid);
-        TextView password = (TextView) findViewById((R.id.Password));
+        TextView emailid = (TextView) findViewById(R.id.editTextTextEmailAddress);
+        TextView password = (TextView) findViewById((R.id.editTextTextPassword));
 
         MaterialButton loginbtn = (MaterialButton) findViewById(R.id.loginbtn);
 
@@ -30,7 +30,7 @@ public class login extends AppCompatActivity {
                 if(emailid.getText().toString().equals("admin@pettish.com") && password.getText().toString().equals("pettish")){
                     //correct
                     //Toast.makeText(login.this,"LOGIN SUCESSFULL",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(login.this,homepage.class);
+                    Intent intent   = new Intent(login.this,homepage.class);
                     startActivity(intent);
 
                 }else
